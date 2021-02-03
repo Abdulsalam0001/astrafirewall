@@ -1865,41 +1865,13 @@ var ajaxurl = "../../wp-admin/admin-ajax.html";
 </script>
 <!--Start of Tawk.to Script-->
 
-<!--End of Tawk.to Script--><script>
-   $(document).ready(function() {
-       function disableBack() {
-           window.history.forward()
-       }
-       window.onload = disableBack();
-       window.onpageshow = function(e) {
-           if (e.persisted)
-               disableBack();
-       }
-   });
-</script>
+<!--End of Tawk.to Script-->
 <!-- Verification Scripts -->
 <script src='../../../cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='../https://astrafirewall/wp-content/themes/ffr/flag-assets/intlTelInput129e.js?v=1.7'></script> 
 <script src='../https://astrafirewall/wp-content/themes/ffr/flag-assets/flag-custom129e.js?v=1.7'></script>
 <script src='../https://astrafirewall/wp-content/themes/ffr/flag-assets/flag-script129e.js?v=1.7'></script>
-<script>
-$(document).ready(function() {
-$.ajax({
-   type: "POST",
-   url: 'https://astrafirewall.com/check_ip.php',
-   success: function(data) {
-       $(".flag-contact").intlTelInput({preferredCountries:[""+data+""]});
-   }
-   });
-$.ajax({
-   type: "POST",
-   url: 'https://astrafirewall.com/check_ip.php',
-   success: function(data) {
-       $(".flag-contact_popup").intlTelInput({preferredCountries:[""+data+""]});
-   }
-   });
-});
-</script>
+
 </body>
 
 <!-- Mirrored from astrafirewall.com/scams/sports-betting-scams/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Oct 2022 16:02:46 GMT -->
