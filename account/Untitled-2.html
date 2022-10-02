@@ -1,0 +1,61 @@
+<ion-content class="ion-padding">
+    <ion-button id="open-modal" expand="block">Withdraw </ion-button>
+
+    
+    <p id="message"> Get Started with our easy transfer </p>
+
+
+    <ion-modal trigger="open-modal">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button onclick="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Transfer Funds </ion-title>
+          <ion-buttons slot="end">
+            <ion-button onclick="confirm()" strong="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-label position="stacked">Amount</ion-label>
+          <ion-input type="number" placeholder="minimum $100"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Financial Institution number</ion-label>
+          <ion-input type="text" placeholder="(3 digits)"></ion-input>
+        </ion-item> <ion-item>
+          <ion-label position="stacked">Branch Transit Number</ion-label>
+          <ion-input type="text" placeholder="(5 digits)"></ion-input>
+        </ion-item> <ion-item>
+          <ion-label position="stacked">Bank Account Number</ion-label>
+          <ion-input type="text" placeholder="(7-12 digits)"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-label position="stacked">Transfer Pin</ion-label>
+          <ion-input type="text" placeholder="Six digit security pin"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ion-modal>
+  </ion-content>
+  
+  <script>
+    var modal = document.querySelector('ion-modal');
+  
+    function cancel() {
+      modal.dismiss(null, 'cancel');
+    }
+  
+    function confirm() {
+      const input = document.querySelector('ion-input');
+      modal.dismiss(input.value, 'confirm');
+    }
+  
+    modal.addEventListener('willDismiss', (ev) => {
+      if (ev.detail.role === 'confirm') {
+        const message = document.querySelector('#message');
+        message.textContent = `error Transfer Pin ,mutiple invalid pin would lead to suspenion`;
+      }
+    });
+  </script>

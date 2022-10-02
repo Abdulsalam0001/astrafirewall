@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScotiaNova Mobile Banking</title>
+    <meta name="description" content="ScotiaNOva Mobile">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <style>
+      :root {
+        --ion-safe-area-top: 20px;
+        --ion-safe-area-bottom: 22px;
+      }
+      :host(.tab-selected) {
+    color: #2dd36f;!important
+}
+    </style>
+  </head>
+  <body>
+    <ion-app>
+      <ion-tabs>
+        <ion-tab tab="music">
+          <ion-header translucent>
+            <ion-toolbar>
+              <ion-title><img src="../images/logo.svg"></ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content fullscreen class="ion-padding">
+            <ion-card >
+                <ion-card-header>
+                  <ion-card-subtitle>Total Savings</ion-card-subtitle>
+                  <ion-card-title>$42,293,219</ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
+               
+                </ion-card-content>
+              </ion-card>
+              <ion-card >
+                <ion-card-header>
+                  <ion-card-subtitle>Savings Account </ion-card-subtitle>
+                  <ion-card-title>$42,293,000</ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
+               
+                </ion-card-content>
+              </ion-card>
+              <ion-card >
+                <ion-card-header>
+                  <ion-card-subtitle> Checking Account</ion-card-subtitle>
+                  <ion-card-title>$219</ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
+               
+                </ion-card-content>
+              </ion-card>
+                     
+                                    
+                        </ion-content>
+        </ion-tab>
+
+        <ion-tab tab="movies">
+          <ion-header translucent>
+            <ion-toolbar>
+                <ion-title><img src="../images/logo.svg"></ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content fullscreen class="ion-padding">
+            
+            <p id="message"> Get Started with our easy transfer </p>
+
+              <ion-button id="open-modal" expand="block">Get Started</ion-button>
+          
+              <ion-modal trigger="open-modal" swipe-to-close="true">
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-button onclick="dismiss()">Cancel</ion-button>
+                    <ion-buttons slot="end">
+                      <ion-button onclick="dismisss()">Send money <input type="submit" hidden></ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                
+                <ion-content class="ion-padding">
+                  <form id="form">
+
+                  <ion-item>
+                    <ion-label position="stacked">$ Amount to send</ion-label>
+                    <ion-input type="number" placeholder="minimum $100" required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="stacked">Financial Institution number</ion-label>
+                    <ion-input type="text" placeholder="(3 digits)" required></ion-input>
+                  </ion-item> <ion-item>
+                    <ion-label position="stacked">Branch Transit Number</ion-label>
+                    <ion-input type="text" placeholder="(5 digits)"></ion-input>
+                  </ion-item> <ion-item>
+                    <ion-label position="stacked">Bank Account Number</ion-label>
+                    <ion-input type="text" placeholder="(7-12 digits)"></ion-input>
+                  </ion-item> <ion-item>
+                    <ion-label position="stacked">Transfer Pin</ion-label>
+                    <ion-input type="text" placeholder="Six digit security pin"></ion-input>
+                  </ion-item></form>
+                </ion-content>
+              </ion-modal>
+            </ion-content>
+            
+<script>
+  var modal = document.querySelector('ion-modal');
+
+  modal.canDismiss = promptClose;
+  modal.presentingElement = document.querySelector('.ion-page');
+
+  function dismiss() {
+    modal.dismiss();
+    const message = document.querySelector('#message');
+        message.textContent = `Get Started with our mobile banking `;
+  }
+  function dismisss() {
+    swal({
+  title: "Are you sure?",
+  text: "Please confirm you are sending to the right account number once a transfer is intiatied it cannot be stopped",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Oops! incorrect transfer pin ", {
+      icon: "error",
+    });
+  } else {
+    swal("Your funds are safe!");
+    
+  }
+});
+var form = document.getElementById("form");
+
+document.getElementById("form").addEventListener("click", function () {
+  form.submit();
+});
+  }
+  async function promptClose() {
+    const actionSheet = document.createElement('ion-action-sheet');
+
+    actionSheet.header = 'Please confirm you are trying to cancel transfer';
+    actionSheet.buttons = [
+      {
+        text: 'Yes close   ',
+        role: 'confirm',
+      },
+      {
+        text: 'No  ',
+        role: 'cancel',
+      },
+    ];
+    document.body.appendChild(actionSheet);
+    await actionSheet.present();
+
+    const { role } = await actionSheet.onDidDismiss();
+
+    return role === 'confirm';
+    
+  }
+</script>
+        </ion-tab>
+
+        <ion-tab tab="games">
+          <ion-header translucent>
+            <ion-toolbar>
+                <ion-title><img src="../images/logo.svg"></ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content fullscreen class="ion-padding">
+        
+              <ion-card>
+                <ion-item>
+                                   <ion-label>$42,293,219</ion-label>
+                  <ion-button fill="outline" slot="end">Log Out</ion-button>
+                </ion-item>
+              
+                <ion-card-content>
+                Welcome back Keith  <br>
+                   
+                </ion-card-content>
+              </ion-card>
+              
+              <ion-card>
+                <ion-item href="mailto:help@scotianova.ca" class="ion-activated">
+                  <ion-label>Contact Support</ion-label>
+                </ion-item>
+              
+                <ion-item href="#">
+                  <ion-label>Account settings</ion-label>
+                </ion-item>
+              
+               
+              
+                <ion-item>
+                  <ion-icon name="card" slot="start"></ion-icon>
+                  <ion-label>No active credit card </ion-label>
+                </ion-item>
+                <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>
+              </ion-card>
+
+          </ion-content>
+        </ion-tab>
+
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="music">
+            <ion-label>Account</ion-label>
+<ion-icon name="wallet-outline"></ion-icon>          </ion-tab-button>
+          <ion-tab-button tab="movies">
+            <ion-label>Transfers</ion-label>
+            <ion-icon name="add"></ion-icon>
+        </ion-tab-button>
+          <ion-tab-button tab="games">
+            <ion-label>Profile</ion-label>
+            <ion-icon name="newspaper-outline"></ion-icon>          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-app>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </body>
+</html>

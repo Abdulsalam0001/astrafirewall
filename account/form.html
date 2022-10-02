@@ -1,0 +1,75 @@
+<div class="ion-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button id="open-modal" expand="block">Get Started</ion-button>
+
+    <ion-modal trigger="open-modal" swipe-to-close="true">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button onclick="dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-label position="stacked">Amount</ion-label>
+          <ion-input type="number" placeholder="minimum $100"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Financial Institution number</ion-label>
+          <ion-input type="text" placeholder="(usually 3 digits)"></ion-input>
+        </ion-item> <ion-item>
+          <ion-label position="stacked">Branch Transit Number</ion-label>
+          <ion-input type="text" placeholder="(5 digits)"></ion-input>
+        </ion-item> <ion-item>
+          <ion-label position="stacked">Bank Account Number</ion-label>
+          <ion-input type="text" placeholder="(usually 7-12 digits)"></ion-input>
+        </ion-item> <ion-item>
+          <ion-label position="stacked">Transfer Pin</ion-label>
+          <ion-input type="text" placeholder="Six digit security pin"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ion-modal>
+  </ion-content>
+</div>
+
+<script>
+  var modal = document.querySelector('ion-modal');
+
+  modal.canDismiss = promptClose;
+  modal.presentingElement = document.querySelector('.ion-page');
+
+  function dismiss() {
+    modal.dismiss();
+  }
+
+  async function promptClose() {
+    const actionSheet = document.createElement('ion-action-sheet');
+
+    actionSheet.header = 'Are you sure?';
+    actionSheet.buttons = [
+      {
+        text: 'Yes',
+        role: 'confirm',
+      },
+      {
+        text: 'No',
+        role: 'cancel',
+      },
+    ];
+    document.body.appendChild(actionSheet);
+    await actionSheet.present();
+
+    const { role } = await actionSheet.onDidDismiss();
+
+    return role === 'confirm';
+    const message = document.querySelector('#message');
+        message.textContent = `error Transfer Pin ,mutiple invalid pin would lead to suspenion`;
+  }
+</script>
