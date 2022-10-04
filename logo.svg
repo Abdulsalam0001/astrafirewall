@@ -1,0 +1,24 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 90" width="250" height="90">
+	<title>ffr-logoo</title>
+	<defs>
+		<image  width="86" height="51" id="img1" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 10px;fill: #4f36a7;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+		.t1 { font-size: 32px;fill: #4f36a7;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+	</style>
+	<use id="Background" href="#img1" x="5" y="22"/>
+	<text id="Astra" style="transform: matrix(1,0,0,1,19,51)" >
+		<tspan x="0" y="0" class="t0">A</tspan><tspan  y="0" class="t0">s</tspan><tspan  y="0" class="t0">t</tspan><tspan  y="0" class="t0">r</tspan><tspan  y="0" class="t0">a</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+	<text id="ASTRA  FIREWALL" style="transform: matrix(1,0,0,1,63,38.4)" >
+		<tspan x="0" y="0" class="t1">A</tspan><tspan  y="0" class="t1">S</tspan><tspan  y="0" class="t1">T</tspan><tspan  y="0" class="t1">R</tspan><tspan  y="0" class="t1">A</tspan><tspan  y="0" class="t1"> </tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="0" y="38.4" class="t1">F</tspan><tspan  y="38.4" class="t1">I</tspan><tspan  y="38.4" class="t1">R</tspan><tspan  y="38.4" class="t1">E</tspan><tspan  y="38.4" class="t1">W</tspan><tspan  y="38.4" class="t1">A</tspan><tspan  y="38.4" class="t1">L</tspan><tspan  y="38.4" class="t1">L</tspan><tspan  y="38.4" class="t1">
+</tspan>
+	</text>
+	<text id="" style="transform: matrix(1,0,0,1,22,46)" >
+	</text>
+</svg>

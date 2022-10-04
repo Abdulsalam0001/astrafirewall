@@ -4,11 +4,11 @@
 		<engineLink>https://wordpress.org/</engineLink>
 		<homePageLink>https://financialfundrecovery.com</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="https://financialfundrecovery.com/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://financialfundrecovery.com/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://financialfundrecovery.com/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="https://financialfundrecovery.com/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="https://financialfundrecovery.com/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="https://astrafirewall.com/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://astrafirewall.com/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://astrafirewall.com/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="https://astrafirewall.com/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="https://astrafirewall.com/wp-json/" />
 			</apis>
 	</service>
 </rsd>
