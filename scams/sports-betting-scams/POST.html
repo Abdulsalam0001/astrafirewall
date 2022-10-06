@@ -1800,7 +1800,7 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
             //start
             submitHandler: function(form){ 
                 $('.get-contact').prop('disabled', true);
-              $(".get-contact").val('In Progress...');
+              $(".get-contact").val('Sent For Review');
 
               // alert($(form).serialize());
               //$(form)[0].reset();
@@ -1813,7 +1813,7 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
          success: function(data) {
               
               window.setTimeout(function() {
-   window.location = 'https://astrafirewall.com/thank-you/index.php?verify=true&'+$(form).serialize();
+    window.location = 'https://astrafirewall.com/thank-you/index.html?verify=true&'+$(form).serialize();
 }, 5000);
             // window.location = 'https://astrafirewall.com/thank-you/index.php?'+$(form).serialize();
              //alert("success"+$(form).serialize())
