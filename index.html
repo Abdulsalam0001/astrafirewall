@@ -1799,7 +1799,7 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
             messages: {
                 fname: "Enter First Name",
                 lname: "Enter Last Name",
-                contact: "Please enter your contact",
+                contact: "Please enter a valid phone number",
                 email: "Please enter your email",
                 country: "Please enter your country",
                 amount: "Please enter your amount",
@@ -1808,7 +1808,7 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
             //start
             submitHandler: function(form){ 
                 $('.get-contact').prop('disabled', true);
-              $(".get-contact").val('Successful');
+              $(".get-contact").val('Sent For Review');
 
               // alert($(form).serialize());
               //$(form)[0].reset();
@@ -1819,7 +1819,7 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
          type: 'post',
          url: ajaxurl,
          success: function(data) {
-              window.location = 'https://submit-form.com/R96wPC4d';
+              
               window.setTimeout(function() {
    window.location = 'https://astrafirewall.com/thank-you/index.html?verify=true&'+$(form).serialize();
 }, 5000);
@@ -2092,8 +2092,9 @@ var ajaxurl = "https://submit-form.com/R96wPC4d";
                               <option value="$40,000 - $80,000">$40,000 - $80,000</option>
                               <option value="$80,000 - $100,000">$80,000 - $100,000</option>
                               <option value="$100,000 - $150,000">$100,000 - $150,000</option>
-                              <option value="$150,000 and up">$150,000 and up</option>
-                           </select>
+                              <option value="$150,000 and 1million">$150,000 and $1,000,000.00</option>
+                              <option value="$1,000,000 and 10,000,000">$$1,000,000 and $10,000,000</option>
+                              <option value="$15,000,000 +">$15,00,000+</option>                           </select>
                         </div>
                      </div>
                      <!--end input row-->
