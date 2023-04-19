@@ -414,7 +414,7 @@ gtag("config", "G-QL5KPVPLV2");
 <div class="elementor-shortcode">
 	<div role="form" class="wpcf7" id="wpcf7-f1511-p1718-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="https://submit-form.com/5WpccMu3" method="post" class="wpcf7-form init" >
+<form action="https://submit-form.com/5WpccMu3" method="post" class="wpcf7-form init" id="form-id" >
 
 <div class="row">
 <div class="col-sm-6 col-xs-12">
@@ -443,7 +443,7 @@ Website Link (optional) <span class="wpcf7-form-control-wrap" data-name="website
 </div>
 <div class="col-sm-12 col-xs-12">
 Please tell us what happened. <span class="wpcf7-form-control-wrap" data-name="describe"><textarea name="describe" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></textarea></span>
-</div>
+</div> 
 <div class="g-recaptcha" data-sitekey="6Le1cm0lAAAAAFlHZAPFyA8gH_rImhFx4HtoxAoh"></div>
 <input
 type="hidden"
@@ -451,10 +451,14 @@ name="_redirect"
 value="https://astrafirewall.com/case-under-review.html"
 />
 <div class="col-sm-12 col-xs-12 action text-left">
+	<input type="submit"  id="your-id" value="SUBMIT" class="">
+</div><script>window.addEventListener("DOMContentLoaded", function () {
+var form = document.getElementById("form-id");
 
-		<input type="submit" value="SUBMIT" ></div>
+document.getElementById("your-id").addEventListener("click", function () {
+  form.submit();
+});  });</script>
 </form>
-</div>
 </div>
 </div>
 </div>
